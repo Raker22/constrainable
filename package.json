@@ -1,0 +1,17 @@
+{
+  "name": "constrainable",
+  "version": "0.1.0",
+  "scripts": {
+    "compile": "tsc",
+    "start": "npm run compile && node example/example.js",
+    "copy:types": "cp src/lib/types.d.ts dist/lib/types.d.ts",
+    "copy": "npm run copy:types",
+    "build": "rm -rf dist/ && tsc && ./scripts/post_build.sh",
+    "publish": "npm run build && npm publish dist"
+  },
+  "private": true,
+  "devDependencies": {
+    "tslint": "~5.9.1",
+    "typescript": "~2.5.3"
+  }
+}
